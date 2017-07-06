@@ -1,6 +1,7 @@
 # udacity-server-config
 
 Server IP: 46.101.142.154 
+URL: http://46.101.142.154/
 
 ## Make sure all installed software is up to date
 1. Run sudo apt-get update to package list
