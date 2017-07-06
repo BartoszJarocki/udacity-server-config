@@ -32,12 +32,12 @@ Server IP: 46.101.142.154
 Run sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contrib to install python and postgresql
 
 ## Project setup 
-* Clone catalog project into /var/www/udacity-catalog
-* Database setup
-1. sudo -u postgres psql
-2. CREATE USER catalog WITH PASSWORD ‘XXX’; 
-3. GRANT ALL PRIVILEGES ON DATABASE catalog TO catalog;
-* Modify apache config (/etc/apache2/sites-enabled/000-default.conf) as follows:
+1. Clone catalog project into /var/www/udacity-catalog
+2. Database setup
+        * sudo -u postgres psql
+        * CREATE USER catalog WITH PASSWORD ‘XXX’; 
+        * GRANT ALL PRIVILEGES ON DATABASE catalog TO catalog;
+3. Modify apache config (/etc/apache2/sites-enabled/000-default.conf) as follows:
 ```
 <VirtualHost *:80>
         ServerAdmin webmaster@localhost
@@ -50,7 +50,7 @@ Run sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-c
 </VirtualHost>
 ```
 
-* Create catalog.wsgi file as follows
+4. Create catalog.wsgi file as follows
 ```
 #!/var/www/udacity-catalog/venv/bin/python
 import sys
@@ -67,6 +67,6 @@ application.secret_key = "udacity-catalog"
 ```
 
 
-* Setup venv and install the requirements  
-* Change database connection from sqlite to posgresql
-
+5. Setup venv and install the requirements  
+6. Change database connection from sqlite to posgresql
+7. Restart apache by running service apache2 restart
