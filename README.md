@@ -30,7 +30,7 @@ URL: http://46.101.142.154/
 4. Enable firewall by running sudo ufw enable
 
 ## Install python and other needed software
-Run sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contrib to install python and postgresql
+Run sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contrib apache2 libapache2-mod-wsgi
 
 ## Project setup 
 1. Clone catalog project into /var/www/udacity-catalog
