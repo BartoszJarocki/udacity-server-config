@@ -47,6 +47,7 @@ Run sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-c
 
         WSGIScriptAlias / /var/www/udacity-catalog/catalog.wsgi
 </VirtualHost>```
+
 * Create catalog.wsgi file as follows
 ```#!/var/www/udacity-catalog/venv/bin/python
 import sys
@@ -59,7 +60,8 @@ execfile(activate_this, dict(__file__=activate_this))
 sys.path.insert(0, "/var/www/udacity-catalog/")
 
 from project import app as application
-application.secret_key = "udacity-catalog”```
+application.secret_key = "udacity-catalog"```
+
 * Setup venv and install the requirements  
 * Change database connection from sqlite to posgresql
 
