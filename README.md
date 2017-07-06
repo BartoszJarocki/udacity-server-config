@@ -38,7 +38,8 @@ Run sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-c
 2. CREATE USER catalog WITH PASSWORD ‘XXX’; 
 3. GRANT ALL PRIVILEGES ON DATABASE catalog TO catalog;
 * Modify apache config (/etc/apache2/sites-enabled/000-default.conf) as follows:
-'''<VirtualHost *:80>
+```
+<VirtualHost *:80>
         ServerAdmin webmaster@localhost
         DocumentRoot /var/www/udacity-catalog
 
@@ -46,10 +47,12 @@ Run sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-c
         CustomLog ${APACHE_LOG_DIR}/access.log combined
 
         WSGIScriptAlias / /var/www/udacity-catalog/catalog.wsgi
-</VirtualHost>'''
+</VirtualHost>
+```
 
 * Create catalog.wsgi file as follows
-'''#!/var/www/udacity-catalog/venv/bin/python
+```
+#!/var/www/udacity-catalog/venv/bin/python
 import sys
 import logging
 logging.basicConfig(stream=sys.stderr)
@@ -60,7 +63,9 @@ execfile(activate_this, dict(__file__=activate_this))
 sys.path.insert(0, "/var/www/udacity-catalog/")
 
 from project import app as application
-application.secret_key = "udacity-catalog"'''
+application.secret_key = "udacity-catalog"
+```
+
 
 * Setup venv and install the requirements  
 * Change database connection from sqlite to posgresql
