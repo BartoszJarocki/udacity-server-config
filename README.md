@@ -35,9 +35,9 @@ Run sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-c
 ## Project setup 
 1. Clone catalog project into /var/www/udacity-catalog
 2. Database setup
-        * sudo -u postgres psql
-        * CREATE USER catalog WITH PASSWORD ‘XXX’; 
-        * GRANT ALL PRIVILEGES ON DATABASE catalog TO catalog;
+        - sudo -u postgres psql
+        - CREATE USER catalog WITH PASSWORD ‘XXX’; 
+        - GRANT ALL PRIVILEGES ON DATABASE catalog TO catalog;
 3. Modify apache config (/etc/apache2/sites-enabled/000-default.conf) as follows:
 ```
 <VirtualHost *:80>
